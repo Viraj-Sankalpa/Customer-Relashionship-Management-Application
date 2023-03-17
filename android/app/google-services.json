@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763476659507",
+    "firebase_url": "https://cdms-8fea0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cdms-8fea0",
+    "storage_bucket": "cdms-8fea0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763476659507:android:bb65275e33779bf036c246",
+        "android_client_info": {
+          "package_name": "com.example.cdms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763476659507-eboe4688ecc06uh7jpancvdqat6rnaii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVvaqv0_ujOOOpyRX3KQiV3k4vyK1S30E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763476659507-eboe4688ecc06uh7jpancvdqat6rnaii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
