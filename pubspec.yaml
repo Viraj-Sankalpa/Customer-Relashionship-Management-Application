@@ -41,6 +41,8 @@ dependencies:
   cloud_firestore: ^4.4.5
   getx_translator: ^1.0.1
   get: ^4.6.5
+  form_field_validator: ^1.1.0
+  shared_preferences: ^2.0.18
 
 dev_dependencies:
   flutter_test:

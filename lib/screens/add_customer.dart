@@ -16,19 +16,29 @@ class _AddCustomerState extends State<AddCustomer> {
   late TextEditingController firstName = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: ThemeHelper()
-                  .textInputDecoration('First Name', 'Enter your first name'),
-              onChanged: (value) {
-                firstName.text = value;
-              },
-            ),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+
+              const SizedBox(height: 25,),
+              const Text("Add Customer",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+              const SizedBox(height: 15,),
+              TextFormField(
+                decoration: ThemeHelper()
+                    .textInputDecoration('First Name', 'Enter your first name'),
+                onChanged: (value) {
+                  firstName.text = value;
+                },
+              ),
+
+
+
+              
+            ],
+          ),
         ),
       ),
     );
