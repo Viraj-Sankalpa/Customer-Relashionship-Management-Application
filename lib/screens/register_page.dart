@@ -3,6 +3,7 @@ import 'package:cdms/screens/signin_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -36,6 +37,8 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Center(
               child: Column(
                 children: [
+                
+                  Lottie.network("https://assets8.lottiefiles.com/packages/lf20_9cyyl8i4.json"),
                   const SizedBox(
                     height: 10,
                   ),
@@ -44,6 +47,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     "Register",
                     style: TextStyle(fontSize: 24),
                   ),
+
+                  
 
                   //first name text field
                   const SizedBox(

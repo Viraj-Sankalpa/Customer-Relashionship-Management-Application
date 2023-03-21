@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -18,45 +19,53 @@ class _LoginPageState extends State<LoginPage> {
       // appBar: AppBar(
       //   title: const Text("Login"),
       // ),
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: Center(
-          child: Form(
-            key: _formKey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Padding(padding: EdgeInsets.all(20)),
-                TextFormField(
-                  validator: (input) {
-                    if (input!.isEmpty) {
-                      return 'Please type an email';
-                    }
-                    return null;
-                  },
-                  onSaved: (input) => _email = input!,
-                  decoration: const InputDecoration(
-                    labelText: 'Email',
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          child: Center(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+      
+                  Lottie.network("https://assets5.lottiefiles.com/packages/lf20_ey576j6e.json"),
+                  const Padding(padding: EdgeInsets.all(20)),
+                  TextFormField(
+                    validator: (input) {
+                      if (input!.isEmpty) {
+                        return 'Please type an email';
+                      }
+                      return null;
+                    },
+                    onSaved: (input) => _email = input!,
+                    decoration: const InputDecoration(
+                      labelText: 'Email',
+                    ),
                   ),
-                ),
-                TextFormField(
-                  validator: (input) {
-                    if (input!.length < 6) {
-                      return 'Your password needs to be at least 6 characters';
-                    }
-                    return null;
-                  },
-                  onSaved: (input) => _password = input!,
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
+                  TextFormField(
+                    validator: (input) {
+                      if (input!.length < 6) {
+                        return 'Your password needs to be at least 6 characters';
+                      }
+                      return null;
+                    },
+                    onSaved: (input) => _password = input!,
+                    decoration: const InputDecoration(
+                      labelText: 'Password',
+                    ),
+                    obscureText: true,
                   ),
-                  obscureText: true,
-                ),
-                ElevatedButton(
-                  onPressed: signIn,
-                  child: const Text('Sign in'),
-                ),
-              ],
+                  ElevatedButton(
+                    onPressed: signIn,
+                    child: const Text('Log In'),
+                  ),
+      
+                  ElevatedButton(onPressed: (){
+                    Navigator.pushNamed(context, '/Register');
+                  }, child: Text("Register Here"))
+                ],
+              ),
             ),
           ),
         ),

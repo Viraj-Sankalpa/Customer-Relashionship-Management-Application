@@ -2,7 +2,7 @@ import 'package:cdms/screens/add_customer.dart';
 import 'package:cdms/screens/home_page.dart';
 import 'package:cdms/screens/login.dart';
 import 'package:cdms/screens/register_page.dart';
-import 'package:cdms/screens/signin_page.dart';
+import 'package:cdms/screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +11,8 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform
-);
- 
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(const MyApp());
 }
 
@@ -28,18 +26,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Customer Relationship Management',
       theme: ThemeData(
-
-        primarySwatch: Colors.lime,
+        primarySwatch: Colors.amber,
       ),
       // home: const RegisterPage(),
-      home: const RegisterPage(),
+      home: const SplashScreen(),
 
       routes: {
-        '/Home' :(context) => const HomePage(),
-        '/LogIn' :(context) => const LoginPage(),
-        '/AddCustomer' :(context) => const AddCustomer(),
+        '/Home': (context) => const HomePage(),
+        '/Register': (context) => const RegisterPage(),
+        '/LogIn': (context) => const LoginPage(),
+        '/AddCustomer': (context) => const AddCustomer(),
       },
     );
   }
 }
-
