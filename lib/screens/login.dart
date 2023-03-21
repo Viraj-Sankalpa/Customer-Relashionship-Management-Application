@@ -15,45 +15,52 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Login"),
-      ),
-      body: Center(
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              TextFormField(
-                validator: (input) {
-                  if (input!.isEmpty) {
-                    return 'Please type an email';
-                  }
-                  return null;
-                },
-                onSaved: (input) => _email = input!,
-                decoration: const InputDecoration(
-                  labelText: 'Email',
+      // appBar: AppBar(
+      //   title: const Text("Login"),
+      // ),
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        child: Center(
+          
+          child: Form(
+            
+            key: _formKey,
+            child: Column(
+      
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Padding(padding: EdgeInsets.all(20)),
+                TextFormField(
+                  validator: (input) {
+                    if (input!.isEmpty) {
+                      return 'Please type an email';
+                    }
+                    return null;
+                  },
+                  onSaved: (input) => _email = input!,
+                  decoration: const InputDecoration(
+                    labelText: 'Email',
+                  ),
                 ),
-              ),
-              TextFormField(
-                validator: (input) {
-                  if (input!.length < 6) {
-                    return 'Your password needs to be at least 6 characters';
-                  }
-                  return null;
-                },
-                onSaved: (input) => _password = input!,
-                decoration: const InputDecoration(
-                  labelText: 'Password',
+                TextFormField(
+                  validator: (input) {
+                    if (input!.length < 6) {
+                      return 'Your password needs to be at least 6 characters';
+                    }
+                    return null;
+                  },
+                  onSaved: (input) => _password = input!,
+                  decoration: const InputDecoration(
+                    labelText: 'Password',
+                  ),
+                  obscureText: true,
                 ),
-                obscureText: true,
-              ),
-              ElevatedButton(
-                onPressed: signIn,
-                child: const Text('Sign in'),
-              ),
-            ],
+                ElevatedButton(
+                  onPressed: signIn,
+                  child: const Text('Sign in'),
+                ),
+              ],
+            ),
           ),
         ),
       ),
