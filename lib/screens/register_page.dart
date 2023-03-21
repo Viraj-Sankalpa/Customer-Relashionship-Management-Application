@@ -214,9 +214,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                       child: const Text("Register")),
 
-                  // ElevatedButton(onPressed: (){
-                  //   Navigator.pushNamed(context, '/SignIn');
-                  // }, child: const Text("SignIn"))
+                  ElevatedButton(onPressed: (){
+                    Navigator.pushNamed(context, '/LogIn');
+                  }, child: const Text("LogIn"))
                 ],
               ),
             ),
