@@ -1,42 +1,84 @@
-import 'package:cdms/screens/theme_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
+
+final databaseReference = FirebaseDatabase.instance.ref();
+
+Future<void> addUser({
+  required String firstName,
+  required String lastName,
+}) async {
+  await databaseReference.child('users').push().set({
+    'firstName': firstName,
+    'lastName': lastName,
+  });
+}
+
+
 
 class AddCustomer extends StatefulWidget {
   const AddCustomer({super.key});
 
   @override
-  State<AddCustomer> createState() => _AddCustomerState();
+  _AddCustomerState createState() => _AddCustomerState();
 }
 
 class _AddCustomerState extends State<AddCustomer> {
-  bool checkedValue = false;
-  bool showSnipper = false;
-  bool checkboxValue = false;
-  bool isLoading = false;
-  late TextEditingController firstName = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+  String _firstName = '';
+  String _lastName = '';
+
+  Future<void> _submitForm() async {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      await addUser(
+        firstName: _firstName,
+        lastName: _lastName,
+      );
+      // Show a success message or navigate to a new screen
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          padding: const EdgeInsets.all(20),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Add User'),
+      ),
+      body: Form(
+        key: _formKey,
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: [
-
-              const SizedBox(height: 25,),
-              const Text("Add Customer",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
-              const SizedBox(height: 15,),
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
               TextFormField(
-                decoration: ThemeHelper()
-                    .textInputDecoration('First Name', 'Enter your first name'),
-                onChanged: (value) {
-                  firstName.text = value;
+                decoration: const InputDecoration(labelText: 'First Name'),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your first name';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _firstName = value!;
                 },
               ),
-
-
-
-              
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Last Name'),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your last name';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _lastName = value!;
+                },
+              ),
+              ElevatedButton(
+                onPressed: _submitForm,
+                child: const Text('Save'),
+              ),
             ],
           ),
         ),

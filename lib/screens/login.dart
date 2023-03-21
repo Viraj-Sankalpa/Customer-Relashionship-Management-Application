@@ -21,12 +21,9 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         padding: const EdgeInsets.all(20),
         child: Center(
-          
           child: Form(
-            
             key: _formKey,
             child: Column(
-      
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Padding(padding: EdgeInsets.all(20)),
@@ -72,7 +69,8 @@ class _LoginPageState extends State<LoginPage> {
     if (formState!.validate()) {
       formState.save();
       try {
-        UserCredential user = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        UserCredential user =
+            await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: _email,
           password: _password,
         );
