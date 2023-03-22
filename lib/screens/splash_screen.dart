@@ -41,6 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 70,
               ),
               Container(
+                padding: const EdgeInsets.all(10),
                 child: const Center(
                   child: Text(
                     "Customer Details Tracker",
