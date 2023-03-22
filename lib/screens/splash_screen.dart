@@ -43,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: const Center(
                   child: Text(
                     "Customer Details Tracker",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30),
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30, color: Color.fromARGB(255, 75, 74, 71)),
                   ),
                 ),
               )
