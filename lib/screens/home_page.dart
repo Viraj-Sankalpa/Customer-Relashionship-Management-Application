@@ -14,11 +14,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        
         child: Container(
+          
           padding: const EdgeInsets.all(10),
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                
                 const SizedBox(
                   height: 10,
                 ),
@@ -44,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lime,
+                      backgroundColor: Colors.amber,
                       elevation: 3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),

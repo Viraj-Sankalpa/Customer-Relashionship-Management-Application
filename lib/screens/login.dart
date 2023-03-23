@@ -28,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  const SizedBox(height: 40,),
       
                   Lottie.network("https://assets5.lottiefiles.com/packages/lf20_ey576j6e.json"),
                   const Padding(padding: EdgeInsets.all(20)),
