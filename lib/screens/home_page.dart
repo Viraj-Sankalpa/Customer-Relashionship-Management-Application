@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const Text(
                   "Search Customer or Company",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24, ),
                 ),
                 const SizedBox(
                   height: 20,
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const Text(
                   "Add Customer or Company",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24,),
                 ),
                 const SizedBox(
                   height: 10,
