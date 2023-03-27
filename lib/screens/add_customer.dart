@@ -23,7 +23,7 @@ class _AddCustomerState extends State<AddCustomer> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
   final TextEditingController designation = TextEditingController();
-  late String dropdownValue = 'Option 1';
+  late String dropdownValue = 'Just In Time Group';
 
   bool isLoading = false;
 
@@ -228,7 +228,7 @@ class _AddCustomerState extends State<AddCustomer> {
                         newValue!; // update dropdownValue when value is changed
                   });
                 },
-                items: <String>['Option 1', 'Option 2', 'Option 3', 'Option 4']
+                items: <String>['Just In Time Group', 'Sri Lanka Telecome', 'Regional Development Bank', 'Peoples Bank', 'Commercial Bank']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
