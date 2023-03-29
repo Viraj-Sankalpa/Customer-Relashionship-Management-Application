@@ -118,7 +118,7 @@ class _AddCustomerState extends State<AddCustomer> {
                 ),
                 validator: (val) {
                   if (val!.isEmpty) {
-                    return "Please enter your password";
+                    return "Please enter your password here";
                   }
                   return null;
                 },
