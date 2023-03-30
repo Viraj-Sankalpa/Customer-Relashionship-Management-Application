@@ -1,4 +1,5 @@
 import 'package:cdms/screens/add_customer.dart';
+import 'package:cdms/screens/details_preview.dart';
 import 'package:cdms/screens/home_page.dart';
 import 'package:cdms/screens/login.dart';
 import 'package:cdms/screens/register_page.dart';
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      // home: const RegisterPage(),
-      home: const SplashScreen(),
+      home: const FirebaseSearchScreen(),
+      // home: const SplashScreen(),
 
       routes: {
         '/Home': (context) => const HomePage(),
