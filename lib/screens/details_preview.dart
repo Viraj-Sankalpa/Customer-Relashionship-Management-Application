@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class FirebaseSearchScreen extends StatefulWidget {
-  const FirebaseSearchScreen({Key? key}) : super(key: key);
+class CustomerSearchScreen extends StatefulWidget {
+  const CustomerSearchScreen({Key? key}) : super(key: key);
 
   @override
-  State<FirebaseSearchScreen> createState() => _FirebaseSearchScreenState();
+  State<CustomerSearchScreen> createState() => _CustomerSearchScreenState();
 }
 
-class _FirebaseSearchScreenState extends State<FirebaseSearchScreen> {
+class _CustomerSearchScreenState extends State<CustomerSearchScreen> {
   List searchResult = [];
 
   void searchFromFirebase(String query) async {
