@@ -163,12 +163,12 @@ class _RegisterPageState extends State<RegisterPage> {
 
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.lime,
+                        backgroundColor: Colors.amber,
                         elevation: 3,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 130),
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(20)),
+                        // padding: const EdgeInsets.symmetric(
+                        //     vertical: 15, horizontal: 130),
                       ),
                       onPressed: () async {
                         setState(() {
@@ -218,6 +218,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         // Navigator.pushNamed(context, '/Home');
                       },
                       child: const Text("Register")),
+
+                      const SizedBox(height: 15,),
 
                   ElevatedButton(onPressed: (){
                     Navigator.pushNamed(context, '/LogIn');

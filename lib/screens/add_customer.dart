@@ -266,10 +266,10 @@ class _AddCustomerState extends State<AddCustomer> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
                     elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15, horizontal: 130),
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(20)),
+                    // padding: const EdgeInsets.symmetric(
+                    //     vertical: 15, horizontal: 130),
                   ),
                   onPressed: () async {
                     setState(() {
