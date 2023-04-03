@@ -9,14 +9,32 @@ class CustomerProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(customer['firstName']),
+        title: Text('${customer['firstName']} ${customer['lastName']}'),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(customer['firstName']),
-            Text(customer['phone1']),
+            Text(
+              'Name: ${customer['firstName']} ${customer['lastName']}',
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Email: ${customer['email']}',
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Phone Number 1: ${customer['phone1']}',
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Phone Number 2: ${customer['phone2']}',
+              style: const TextStyle(fontSize: 16),
+            ),
             // Add other fields as necessary
           ],
         ),

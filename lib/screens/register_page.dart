@@ -1,9 +1,11 @@
+import 'dart:io';
 import 'package:cdms/screens/login.dart';
 import 'package:cdms/screens/signin_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -15,19 +17,22 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   final _firestore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
+
   bool checkedValue = false;
   bool showSnipper = false;
   bool checkboxValue = false;
   late TextEditingController firstName = TextEditingController();
   late TextEditingController lastName = TextEditingController();
-
   late TextEditingController phone = TextEditingController();
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
 
+
   bool isLoading = false;
 
   @override
+
+
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -37,18 +42,17 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Center(
               child: Column(
                 children: [
-                
-                  Lottie.network("https://assets8.lottiefiles.com/packages/lf20_9cyyl8i4.json"),
+                  Lottie.network(
+                      "https://assets8.lottiefiles.com/packages/lf20_9cyyl8i4.json"),
                   const SizedBox(
                     height: 10,
                   ),
                   //title
+
                   const Text(
                     "Register",
                     style: TextStyle(fontSize: 24),
                   ),
-
-                  
 
                   //first name text field
                   const SizedBox(
@@ -196,6 +200,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               'email': _email.text,
                               'phone': phone.text,
                             });
+                            
 
                             // ignore: use_build_context_synchronously
                             Navigator.of(context).pushAndRemoveUntil(
@@ -207,7 +212,9 @@ class _RegisterPageState extends State<RegisterPage> {
                             isLoading = false;
                           });
                         } catch (e) {
-                          // const AlertDialog(title: Text("Error"),);
+                          const AlertDialog(
+                            title: Text("Error"),
+                          );
 
                           // ignore: avoid_print
                           print(e);
@@ -219,11 +226,15 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                       child: const Text("Register")),
 
-                      const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
 
-                  ElevatedButton(onPressed: (){
-                    Navigator.pushNamed(context, '/LogIn');
-                  }, child: const Text("LogIn"))
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/LogIn');
+                      },
+                      child: const Text("LogIn"))
                 ],
               ),
             ),
