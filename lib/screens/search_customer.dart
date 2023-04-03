@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import '../details_page.dart';
+
 class CustomerSearchScreen extends StatefulWidget {
   const CustomerSearchScreen({Key? key}) : super(key: key);
 
@@ -50,16 +52,26 @@ class _CustomerSearchScreenState extends State<CustomerSearchScreen> {
                 return ListTile(
                   title: Text(searchResult[index]['firstName']),
                   subtitle: Text(searchResult[index]['phone1']),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CustomerProfileScreen(
+                            customer: searchResult[index]),
+                      ),
+                    );
+                  },
                 );
               },
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.all(15.0),
-            child: ElevatedButton(onPressed: (){
-              Navigator.pushNamed(context, '/AddCustomer');
-            }, child: const Text("Add New Customer")),
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/AddCustomer');
+                },
+                child: const Text("Add New Customer")),
           )
         ],
       ),

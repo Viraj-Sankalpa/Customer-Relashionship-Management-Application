@@ -46,15 +46,11 @@ class _AddCustomerState extends State<AddCustomer> {
                 style: TextStyle(fontSize: 24),
               ),
 
-
               DropdownButton<String>(
-                
-                
                 value: title, // current value of dropdown menu
                 onChanged: (String? newValue) {
                   setState(() {
-                    title =
-                        newValue!; // update title when value is changed
+                    title = newValue!; // update title when value is changed
                   });
                 },
                 items: <String>['Mr', 'Ms', 'Mrs', 'Dr', 'Hon']
@@ -241,7 +237,6 @@ class _AddCustomerState extends State<AddCustomer> {
                 height: 20,
               ),
               DropdownButton<String>(
-                
                 value: companies, // current value of dropdown menu
                 onChanged: (String? newValue) {
                   setState(() {
@@ -249,8 +244,13 @@ class _AddCustomerState extends State<AddCustomer> {
                         newValue!; // update companies when value is changed
                   });
                 },
-                items: <String>['Just In Time Group', 'Sri Lanka Telecome', 'Regional Development Bank', 'Peoples Bank', 'Commercial Bank']
-                    .map<DropdownMenuItem<String>>((String value) {
+                items: <String>[
+                  'Just In Time Group',
+                  'Sri Lanka Telecome',
+                  'Regional Development Bank',
+                  'Peoples Bank',
+                  'Commercial Bank'
+                ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),
@@ -277,23 +277,19 @@ class _AddCustomerState extends State<AddCustomer> {
                     });
 
                     _firestore.collection('customers').doc(_email.text).set({
-                      'title' : title,
+                      'title': title,
                       'firstName': firstName.text,
                       'lastName': lastName.text,
                       'email': _email.text,
                       'phone1': phone1.text,
                       'phone2': phone2.text,
+                    });
+
+                    _firestore.collection('organization').doc(_email.text).set({
+                      'companies': companies,
                       'landNumber': landNumber.text,
                       'designation': designation.text,
                     });
-
-                    _firestore
-                        .collection('organization')
-                        .doc(_email.text)
-                        .set({
-                          'companies': companies,
-
-                        });
 
                     Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
@@ -303,10 +299,14 @@ class _AddCustomerState extends State<AddCustomer> {
                     // Navigator.pushNamed(context, '/Home');
                   },
                   child: const Text("Submit")),
-                  const SizedBox(height: 10,),
-                  ElevatedButton(onPressed: (){
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
                     Navigator.pushNamed(context, '/Search');
-                  }, child: const Text("Search Customer"))
+                  },
+                  child: const Text("Search Customer"))
             ]),
           ),
         ),

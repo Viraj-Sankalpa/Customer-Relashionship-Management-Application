@@ -1,5 +1,5 @@
 import 'package:cdms/screens/add_customer.dart';
-import 'package:cdms/screens/details_preview.dart';
+import 'package:cdms/screens/search_customer.dart';
 
 import 'package:cdms/screens/login.dart';
 import 'package:cdms/screens/register_page.dart';
