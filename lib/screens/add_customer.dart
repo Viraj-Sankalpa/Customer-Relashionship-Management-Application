@@ -46,8 +46,9 @@ class _AddCustomerState extends State<AddCustomer> {
                 style: TextStyle(fontSize: 24),
               ),
 
-              
+
               DropdownButton<String>(
+                
                 
                 value: title, // current value of dropdown menu
                 onChanged: (String? newValue) {
@@ -276,6 +277,7 @@ class _AddCustomerState extends State<AddCustomer> {
                     });
 
                     _firestore.collection('customers').doc(_email.text).set({
+                      'title' : title,
                       'firstName': firstName.text,
                       'lastName': lastName.text,
                       'email': _email.text,
@@ -290,6 +292,7 @@ class _AddCustomerState extends State<AddCustomer> {
                         .doc(_email.text)
                         .set({
                           'companies': companies,
+
                         });
 
                     Navigator.of(context).pushAndRemoveUntil(
@@ -300,6 +303,10 @@ class _AddCustomerState extends State<AddCustomer> {
                     // Navigator.pushNamed(context, '/Home');
                   },
                   child: const Text("Submit")),
+                  const SizedBox(height: 10,),
+                  ElevatedButton(onPressed: (){
+                    Navigator.pushNamed(context, '/Search');
+                  }, child: const Text("Search Customer"))
             ]),
           ),
         ),
