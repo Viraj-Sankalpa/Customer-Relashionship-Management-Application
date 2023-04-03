@@ -14,6 +14,11 @@ class _LoginPageState extends State<LoginPage> {
   late String _email, _password;
 
   @override
+  // void initState(){
+  //   super.initState();
+  //   _email = "email";
+  //   _password = "password";
+  // }
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
@@ -57,10 +62,13 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     obscureText: true,
                   ),
+                  const SizedBox(height: 15.0,),
                   ElevatedButton(
                     onPressed: signIn,
                     child: const Text('Log In'),
                   ),
+
+                  const SizedBox(height: 15.0,),
       
                   ElevatedButton(onPressed: (){
                     Navigator.pushNamed(context, '/Register');
@@ -84,7 +92,8 @@ class _LoginPageState extends State<LoginPage> {
           email: _email,
           password: _password,
         );
-        Navigator.pushReplacementNamed(context, '/Home');
+        // Navigator.pushReplacementNamed(context, '/Home');
+        Navigator.pushReplacementNamed(context, '/Search');
       } catch (e) {
         // print(e.message);
       }

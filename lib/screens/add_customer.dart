@@ -21,9 +21,10 @@ class _AddCustomerState extends State<AddCustomer> {
   late TextEditingController phone2 = TextEditingController();
   late TextEditingController landNumber = TextEditingController();
   final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
+  // final TextEditingController _password = TextEditingController();
   final TextEditingController designation = TextEditingController();
-  late String dropdownValue = 'Just In Time Group';
+  late String companies = 'Just In Time Group';
+  late String title = 'Mr';
 
   bool isLoading = false;
 
@@ -43,6 +44,25 @@ class _AddCustomerState extends State<AddCustomer> {
               const Text(
                 "Add New Customer",
                 style: TextStyle(fontSize: 24),
+              ),
+
+              
+              DropdownButton<String>(
+                
+                value: title, // current value of dropdown menu
+                onChanged: (String? newValue) {
+                  setState(() {
+                    title =
+                        newValue!; // update title when value is changed
+                  });
+                },
+                items: <String>['Mr', 'Ms', 'Mrs', 'Dr', 'Hon']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
               ),
 
               //first name text field
@@ -104,28 +124,28 @@ class _AddCustomerState extends State<AddCustomer> {
               ),
 
               //password
-              const SizedBox(
-                height: 20,
-              ),
-              TextFormField(
-                obscureText: true,
-                decoration: const InputDecoration(
-                  label: Text("Password"),
-                  prefixIcon: Icon(Icons.password_rounded),
+              // const SizedBox(
+              //   height: 20,
+              // ),
+              // TextFormField(
+              //   obscureText: true,
+              //   decoration: const InputDecoration(
+              //     label: Text("Password"),
+              //     prefixIcon: Icon(Icons.password_rounded),
 
-                  // labelStyle: TextStyle(color: Colors.yellowAccent),
-                  // border: OutlineInputBorder(),
-                ),
-                validator: (val) {
-                  if (val!.isEmpty) {
-                    return "Please enter your password here";
-                  }
-                  return null;
-                },
-                onChanged: (value) {
-                  _password.text = value;
-                },
-              ),
+              //     // labelStyle: TextStyle(color: Colors.yellowAccent),
+              //     // border: OutlineInputBorder(),
+              //   ),
+              //   validator: (val) {
+              //     if (val!.isEmpty) {
+              //       return "Please enter your password here";
+              //     }
+              //     return null;
+              //   },
+              //   onChanged: (value) {
+              //     _password.text = value;
+              //   },
+              // ),
 
               //telephone number 1
               const SizedBox(
@@ -221,11 +241,11 @@ class _AddCustomerState extends State<AddCustomer> {
               ),
               DropdownButton<String>(
                 
-                value: dropdownValue, // current value of dropdown menu
+                value: companies, // current value of dropdown menu
                 onChanged: (String? newValue) {
                   setState(() {
-                    dropdownValue =
-                        newValue!; // update dropdownValue when value is changed
+                    companies =
+                        newValue!; // update companies when value is changed
                   });
                 },
                 items: <String>['Just In Time Group', 'Sri Lanka Telecome', 'Regional Development Bank', 'Peoples Bank', 'Commercial Bank']
@@ -269,7 +289,7 @@ class _AddCustomerState extends State<AddCustomer> {
                         .collection('organization')
                         .doc(_email.text)
                         .set({
-                          'dropdownValue': dropdownValue,
+                          'companies': companies,
                         });
 
                     Navigator.of(context).pushAndRemoveUntil(
