@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "763476659507",
-    "firebase_url": "https://cdms-8fea0-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "cdms-8fea0",
-    "storage_bucket": "cdms-8fea0.appspot.com"
+    "project_number": "1029365171989",
+    "project_id": "jit-crm",
+    "storage_bucket": "jit-crm.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:763476659507:android:bb65275e33779bf036c246",
+        "mobilesdk_app_id": "1:1029365171989:android:0ca0e1ff1f2d3974d4cb1c",
         "android_client_info": {
-          "package_name": "com.example.cdms"
+          "package_name": "com.example.news"
         }
       },
       "oauth_client": [
         {
-          "client_id": "763476659507-eboe4688ecc06uh7jpancvdqat6rnaii.apps.googleusercontent.com",
+          "client_id": "1029365171989-5n14euj9o5btou3h1t98jui3b4h8stvt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDVvaqv0_ujOOOpyRX3KQiV3k4vyK1S30E"
+          "current_key": "AIzaSyCBWLqWc7rqh7IIlpuxGjD1mWmUZA8576A"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "763476659507-eboe4688ecc06uh7jpancvdqat6rnaii.apps.googleusercontent.com",
+              "client_id": "1029365171989-3rn81qupjcogr7ukegiju5675e8i3f01.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

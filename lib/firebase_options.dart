@@ -44,43 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCEuqdEnW2Ya6uQ7TMea18djs9tCoqLC-o',
-    appId: '1:763476659507:web:e9e1c3ad587390e336c246',
-    messagingSenderId: '763476659507',
-    projectId: 'cdms-8fea0',
-    authDomain: 'cdms-8fea0.firebaseapp.com',
-    databaseURL: 'https://cdms-8fea0-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'cdms-8fea0.appspot.com',
+    apiKey: 'AIzaSyAWjmK9Ftn3JO3Wau2pH4SirJ78CNBN7qs',
+    appId: '1:1029365171989:web:5acad019752238bad4cb1c',
+    messagingSenderId: '1029365171989',
+    projectId: 'jit-crm',
+    authDomain: 'jit-crm.firebaseapp.com',
+    storageBucket: 'jit-crm.appspot.com',
+    measurementId: 'G-S322HECCNH',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDVvaqv0_ujOOOpyRX3KQiV3k4vyK1S30E',
-    appId: '1:763476659507:android:bb65275e33779bf036c246',
-    messagingSenderId: '763476659507',
-    projectId: 'cdms-8fea0',
-    databaseURL: 'https://cdms-8fea0-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'cdms-8fea0.appspot.com',
+    apiKey: 'AIzaSyCBWLqWc7rqh7IIlpuxGjD1mWmUZA8576A',
+    appId: '1:1029365171989:android:0ca0e1ff1f2d3974d4cb1c',
+    messagingSenderId: '1029365171989',
+    projectId: 'jit-crm',
+    storageBucket: 'jit-crm.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDCQfOx5SnNiJ00QuwNIoi3cd9vIniQGq0',
-    appId: '1:763476659507:ios:155752773e55c54436c246',
-    messagingSenderId: '763476659507',
-    projectId: 'cdms-8fea0',
-    databaseURL: 'https://cdms-8fea0-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'cdms-8fea0.appspot.com',
-    iosClientId: '763476659507-7eu16sdgogd0ln57e75g260mano8afp2.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAi6oMCGpqLXG46dHJyLUpUfz-3vSO3tMo',
+    appId: '1:1029365171989:ios:76fa61da21a262a7d4cb1c',
+    messagingSenderId: '1029365171989',
+    projectId: 'jit-crm',
+    storageBucket: 'jit-crm.appspot.com',
+    iosClientId: '1029365171989-cnkqju8r7j6focnp6scjq5pn8u48asbc.apps.googleusercontent.com',
     iosBundleId: 'com.example.cdms',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDCQfOx5SnNiJ00QuwNIoi3cd9vIniQGq0',
-    appId: '1:763476659507:ios:155752773e55c54436c246',
-    messagingSenderId: '763476659507',
-    projectId: 'cdms-8fea0',
-    databaseURL: 'https://cdms-8fea0-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'cdms-8fea0.appspot.com',
-    iosClientId: '763476659507-7eu16sdgogd0ln57e75g260mano8afp2.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAi6oMCGpqLXG46dHJyLUpUfz-3vSO3tMo',
+    appId: '1:1029365171989:ios:76fa61da21a262a7d4cb1c',
+    messagingSenderId: '1029365171989',
+    projectId: 'jit-crm',
+    storageBucket: 'jit-crm.appspot.com',
+    iosClientId: '1029365171989-cnkqju8r7j6focnp6scjq5pn8u48asbc.apps.googleusercontent.com',
     iosBundleId: 'com.example.cdms',
   );
 }
