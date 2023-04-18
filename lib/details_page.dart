@@ -16,9 +16,18 @@ class CustomerProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Name: ${customer['firstName']} ${customer['lastName']}',
-              style: const TextStyle(fontSize: 16),
+            const SizedBox(height: 10),
+            Padding(padding: const EdgeInsets.all(8,),
+              
+              child: Card(
+                margin: const EdgeInsets.all(20),
+                
+            
+                child: Text(
+                  'Name: ${customer['firstName']} ${customer['lastName']}',
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ),
             ),
             const SizedBox(height: 8),
             Text(

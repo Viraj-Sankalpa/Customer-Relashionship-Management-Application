@@ -50,8 +50,8 @@ class _CustomerSearchScreenState extends State<CustomerSearchScreen> {
               itemCount: searchResult.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(searchResult[index]['firstName']),
-                  subtitle: Text(searchResult[index]['phone1']),
+                  title: Text(searchResult[index]['firstName'].toString()),
+                  subtitle: Text(searchResult[index]['phone1'].toString()),
                   onTap: () {
                     Navigator.push(
                       context,

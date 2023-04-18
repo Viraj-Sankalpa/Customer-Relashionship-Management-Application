@@ -53,7 +53,7 @@ class _AddCustomerState extends State<AddCustomer> {
                     title = newValue!; // update title when value is changed
                   });
                 },
-                items: <String>['Mr', 'Ms', 'Mrs', 'Dr', 'Hon']
+                items: <String>['Mr', 'Ms', 'Mrs', 'Dr', 'Hon','Ven']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -231,6 +231,8 @@ class _AddCustomerState extends State<AddCustomer> {
                   designation.text = value;
                 },
               ),
+
+             
 
               //select company
               const SizedBox(
