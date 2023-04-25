@@ -1,5 +1,5 @@
 import 'package:cdms/screens/add_customer.dart';
-import 'package:cdms/screens/profile_page.dart';
+import 'package:cdms/screens/all_customers.dart';
 import 'package:cdms/screens/search_customer.dart';
 
 import 'package:cdms/screens/login.dart';
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         '/Register': (context) => const RegisterPage(),
         '/LogIn': (context) => const LoginPage(),
         '/AddCustomer': (context) => const AddCustomer(),
-        '/AllCustomers': (context) =>  ProfilePage(),
+        '/AllCustomers': (context) =>  AllCustomers(),
       },
     );
   }
