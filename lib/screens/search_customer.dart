@@ -72,6 +72,14 @@ class _CustomerSearchScreenState extends State<CustomerSearchScreen> {
                   Navigator.pushNamed(context, '/AddCustomer');
                 },
                 child: const Text("Add New Customer")),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/AllCustomers');
+                },
+                child: const Text("All Customers")),
           )
         ],
       ),
