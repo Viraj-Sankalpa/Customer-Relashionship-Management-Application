@@ -1,7 +1,6 @@
 import 'package:cdms/screens/add_customer.dart';
 import 'package:cdms/screens/all_customers.dart';
 import 'package:cdms/screens/search_customer.dart';
-
 import 'package:cdms/screens/login.dart';
 import 'package:cdms/screens/register_page.dart';
 import 'package:cdms/screens/splash_screen.dart';
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      // home: ProfilePage(),
+      // home: CustomerDetailsPage(),
       home: const SplashScreen(),
 
       routes: {
