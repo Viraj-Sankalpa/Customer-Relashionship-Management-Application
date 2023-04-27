@@ -20,7 +20,8 @@ class _AllCustomersState extends State<AllCustomers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Customer Profile'),
+        centerTitle: true,
+        title: const Text('All Customers'),
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: _firestore.collection('customers').snapshots(),
@@ -30,7 +31,7 @@ class _AllCustomersState extends State<AllCustomers> {
           }
 
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
 
           return ListView(
