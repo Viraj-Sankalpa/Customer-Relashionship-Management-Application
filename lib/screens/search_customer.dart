@@ -46,6 +46,7 @@ class _CustomerSearchScreenState extends State<CustomerSearchScreen> {
             padding: const EdgeInsets.all(15.0),
             child: TextField(
               decoration: const InputDecoration(
+                icon: Icon(Icons.search_rounded),
                 border: OutlineInputBorder(),
                 hintText: "Search Here",
               ),
