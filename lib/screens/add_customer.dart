@@ -266,7 +266,7 @@ class _AddCustomerState extends State<AddCustomer> {
 
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.amber,
+                    backgroundColor: Colors.blueGrey,
                     elevation: 3,
                     // shape: RoundedRectangleBorder(
                     //     borderRadius: BorderRadius.circular(20)),

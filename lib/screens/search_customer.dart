@@ -28,11 +28,20 @@ class _CustomerSearchScreenState extends State<CustomerSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Customer Search"),
-      ),
+      // appBar: AppBar(
+      //   centerTitle: true,
+      //   title: const Text("Customer Search"),
+      // ),
       body: Column(
         children: [
+          const SizedBox(
+                height: 20,
+              ),
+              //title
+              const Text(
+                "Search Customer",
+                style: TextStyle(fontSize: 24, ),
+              ),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: TextField(
